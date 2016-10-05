@@ -1,0 +1,28 @@
+* Create Component TwitterComponent
+	ng g Component Twitter
+
+   - adds the boilerplate for a Component
+     - Creates Folder
+     - Creates twitter.component.ts
+     - Creates twitter.component.css
+     - Creates twitter.component.html
+
+   - adds the declaration in the app.module.ts
+
+* Remove the OnInit interface
+
+* Create Class WindowReference
+
+* Change the selector of TwitterComponent to 'tweet'
+
+* add the script to your page
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+https://publish.twitter.com/#
+https://dev.twitter.com/web/javascript
+https://dev.twitter.com/web/javascript/loading
+https://dev.twitter.com/web/embedded-tweets
+https://dev.twitter.com/web/embedded-tweets/javascript-create
+https://dev.twitter.com/web/javascript/events

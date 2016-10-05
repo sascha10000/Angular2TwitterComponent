@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AngularTwitterComponent</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <script>
+    // START twttr initialization
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+    
+      return t;
+    }(document, "script", "twitter-wjs"));
+    // END twttr initialization
+  </script>
+
+  <app-root></app-root>
+  
+<!-- Plain HTML/JS usage -->
+  <h1>Static Tweet</h1>
+  <script>
+    // adds a tweet
+    twttr.ready(
+      function(evt) {
+        twttr.widgets.createTweet(
+          '783635990527311876',
+          document.getElementById('container'),
+          {
+            theme: 'dark'
+        });
+      }
+    );
+  </script>
+  <div id="container"></div>
+</body>
+</html>
