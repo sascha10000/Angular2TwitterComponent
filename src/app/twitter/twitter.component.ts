@@ -7,25 +7,18 @@ import {WindowReference} from '../window-reference';
   styleUrls: ['./twitter.component.css']
 })
 export class TwitterComponent {
-  tweetId:string;
+  tweetId:string = "";
 
   @Input('tweetId') set setTweetId(tweetId:string){
     this.tweetId = tweetId;
-
     let win = WindowReference.get();
-    console.log(win.twttr);
-    if(win.twttr.init){
-      this.createWidget();
-    }
-    else {
-      win.twttr.ready(this.createWidget);
-    }
+    win.twttr.ready(() => { 
+      win.twttr.widgets.createTweet(this.tweetId, this.elem.nativeElement)
+    });
   }
 
-  constructor(private elem:ElementRef) { }
-
-  createWidget(){
-    console.log(this.tweetId);
-    WindowReference.get().twttr.widgets.createTweet(this.tweetId, this.elem.nativeElement);
+  constructor(private elem:ElementRef) { 
+    console.log("called");
+    console.log(this.tweetId)
   }
 }

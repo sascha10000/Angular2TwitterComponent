@@ -1,4 +1,7 @@
-<h1>
-  <button (click)="addTweet()">Add Tweet Id</button><input type="text" [(ngModel)]="newId" palceholder="Tweet ID"/>
+<div>
+  <h1>
+    <button (click)="addTweet()">Add Tweet Id</button><input type="text" [(ngModel)]="newId" palceholder="Tweet ID"/>
+  </h1>
+
   <tweet *ngFor="let tweet of tweetList" [tweetId]="tweet"></tweet>
-</h1>
+</div>

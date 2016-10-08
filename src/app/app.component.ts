@@ -15,7 +15,7 @@ export class AppComponent {
   newId:string;
   addTweet(){
     if(this.newId != ""){
-      this.tweetList.unshift(this.newId);
+      this.tweetList.push(this.newId);
       this.newId = "";
     }
   }
