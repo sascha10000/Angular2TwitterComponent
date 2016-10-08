@@ -1,3 +1,5 @@
+This project is an example for using Twitter Widget.js with angular2. If you want to have further information read here http://www.sascha.tech/2016/10/08/angular2-using-the-twitter-javascript-widgets/
+
 # AngularTwitterComponent
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.16.
